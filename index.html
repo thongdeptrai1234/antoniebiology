@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Download Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .download-button {
+            display: inline-block;
+            margin: 20px;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+        .image-container {
+            margin-bottom: 30px; /* Thêm khoảng cách dưới hình ảnh */
+        }
+        .image-container img {
+            max-width: 50%; /* Giảm kích thước hình ảnh xuống 50% */
+            height: auto;   /* Giữ tỷ lệ khung hình */
+        }
+    </style>
+</head>
+<body>
+    <h1>Download Your Files</h1>
+
+    <!-- Thêm phần hình ảnh PNG -->
+    <div class="image-container">
+        <img src="LOGO.png" alt="Image description">
+    </div>
+
+    <!-- Các nút tải xuống -->
+    <a href="Antonie biology.apk" class="download-button" download>Download for Android</a>
+    <a href="AntonibiologyPC.zip" class="download-button" download>Download for PC</a>
+</body>
+</html>
