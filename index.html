@@ -17,7 +17,7 @@
         }
         .download-button {
             display: inline-block;
-            margin: 20px;
+            margin: 10px;
             padding: 15px 30px;
             font-size: 16px;
             color: white;
@@ -30,13 +30,22 @@
         .download-button:hover {
             background-color: #0056b3;
         }
-        .image-container {
-            margin-top: 20px; /* Khoảng cách giữa các ảnh */
+        .logo-main {
+            margin-bottom: 40px;
         }
-        .image-container img {
-            max-width: 100px; /* Kích thước nhỏ cho các logo */
+        .logo-main img {
+            max-width: 380px; /* Kích thước lớn cho logo chính */
+        }
+        .buttons-and-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px; /* Khoảng cách giữa các phần tử */
+        }
+        .buttons-and-logos .image-container img {
+            max-width: 50px; /* Kích thước nhỏ cho các logo Android và Windows */
             height: auto;
-            margin: 10px;
         }
         footer {
             margin-top: 30px;
@@ -46,22 +55,39 @@
 <body>
     <header>
         <h1>Antonie Biology - Download Your App</h1>
-        
-        <!-- Chèn logo chính của bạn -->
-        <div class="image-container">
-            <img src="LOGO.png" alt="Antonie Biology Logo">
-        </div>
     </header>
 
     <main>
+        <!-- Logo chính (LOGO.png) nằm trên và to hơn -->
+        <div class="logo-main">
+            <img src="LOGO.png" alt="Antonie Biology Logo">
+        </div>
+
         <section>
             <h2>About Antonie Biology</h2>
             <p>Antonie Biology is your ultimate resource for exploring the fascinating biological cells. Get the app now to dive into cell biology, and more!</p>
         </section>
 
-        <!-- Các nút tải xuống -->
-        <a href="https://github.com/thongdeptrai1234/antoniebiology/releases/download/v1.0/Antonie.biology.apk" class="download-button" target="_blank">Download for Android</a>
-        <a href="https://github.com/thongdeptrai1234/antoniebiology/releases/download/v2.0/AntoniebiologyPC.zip" class="download-button" download>Download for Windows</a>
+        <!-- Sử dụng div để chứa cả nút và logo nằm ngang -->
+        <div class="buttons-and-logos">
+            <!-- Nút tải xuống Android -->
+            <div>
+                <a href="https://github.com/thongdeptrai1234/antoniebiology/releases/download/v1.0/Antonie.biology.apk" class="download-button" target="_blank">Download for Android</a>
+                <!-- Logo Android -->
+                <div class="image-container">
+                    <img src="androidlogo.png" alt="Android Logo">
+                </div>
+            </div>
+
+            <!-- Nút tải xuống Windows -->
+            <div>
+                <a href="https://github.com/thongdeptrai1234/antoniebiology/releases/download/v2.0/AntoniebiologyPC.zip" class="download-button" download>Download for Windows</a>
+                <!-- Logo Windows -->
+                <div class="image-container">
+                    <img src="windowlogo.png" alt="Windows Logo">
+                </div>
+            </div>
+        </div>
 
     </main>
 
