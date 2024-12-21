@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Download Page</title>
+    <title>File Download with Integrity Check</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -26,24 +26,42 @@
             background-color: #0056b3;
         }
         .image-container {
-            margin-bottom: 30px; /* Thêm khoảng cách dưới hình ảnh */
+            margin-bottom: 30px;
         }
         .image-container img {
-            max-width: 50%; /* Giảm kích thước hình ảnh xuống 50% */
-            height: auto;   /* Giữ tỷ lệ khung hình */
+            max-width: 50%;
+            height: auto;
+        }
+        .hash-info {
+            margin-top: 30px;
+            font-size: 18px;
+        }
+        .hash {
+            font-weight: bold;
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <h1>Download Your Files</h1>
+    <h1>Download Your Files and Verify Integrity</h1>
 
-    <!-- Thêm phần hình ảnh PNG -->
     <div class="image-container">
         <img src="LOGO.png" alt="Image description">
+    </div>
+
+    <!-- Hiển thị hash của tệp -->
+    <div class="hash-info">
+        <p><strong>MD5 Hash of the File:</strong></p>
+        <p class="hash">0f94b185a713b7c7516664c58a3d7163</p>
+        <p>Before downloading the file, please verify the hash after downloading to ensure the file's integrity.</p>
     </div>
 
     <!-- Các nút tải xuống -->
     <a href="Antonie biology.apk" class="download-button" download>Download for Android</a>
     <a href="AntonibiologyPC.zip" class="download-button" download>Download for Windows</a>
+
+    <footer>
+        <p>Ensure the hash matches after download to confirm the file's integrity.</p>
+    </footer>
 </body>
 </html>
